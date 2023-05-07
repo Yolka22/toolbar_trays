@@ -1,0 +1,83 @@
+﻿<Window x:Class="toolbar_trays.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:toolbar_trays"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+
+        <StackPanel>
+
+            <ToolBarTray>
+                <ToolBar Band="1">
+
+                    <Button FontWeight="Bold">Bold</Button>
+                    <Button FontStyle="Italic">Italic</Button>
+                    <Button>
+                        <TextBlock TextDecorations="Underline" Text="Underline"/>
+                    </Button>
+                    <Button>Clear</Button>
+                    <ToolBar Band="1">
+
+                        <Label>Font Size:</Label>
+                        <ComboBox Width="30"></ComboBox>
+                        
+                    </ToolBar>
+
+                    <ToolBar Band="1">
+
+                        <Label>Color:</Label>
+                        <ComboBox>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock>Aqua </TextBlock>
+                                <Border Background="Aqua" BorderThickness="8" BorderBrush="Aqua" Margin="2"></Border>
+                                
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock>Green </TextBlock>
+                                <Border Background="Green" BorderThickness="8" BorderBrush="Green" Margin="2"></Border>
+
+                            </StackPanel>
+
+                        </ComboBox>
+
+                        
+                        
+                    </ToolBar>
+
+                </ToolBar>
+
+                <ToolBar Band="2">
+
+                    <Label>Start:</Label>
+                    <TextBlock VerticalAlignment="Center" Text="0"></TextBlock>
+
+                    <Label>End:</Label>
+                    <TextBlock VerticalAlignment="Center" Text="0"></TextBlock>
+
+                </ToolBar>
+            </ToolBarTray>
+
+            <TextBlock TextWrapping="Wrap">
+                
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in
+voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.
+                
+            </TextBlock>
+            
+        </StackPanel>
+        
+    </Grid>
+</Window>
